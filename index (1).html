@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Prototipos web</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#111214;
+    --panel:#1a1b1e;
+    --line:#2c2d31;
+    --text:#eceef0;
+    --muted:#8c8e94;
+    --accent:#e8e4da;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Instrument Serif', serif;}
+
+  header{
+    padding:80px 40px 56px; max-width:1100px; margin:0 auto;
+    border-bottom:1px solid var(--line);
+  }
+  .kicker{font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); margin-bottom:18px;}
+  h1{font-family:'Instrument Serif', serif; font-weight:400; font-size:clamp(2.4rem,5vw,3.6rem); line-height:1.05; max-width:640px;}
+  h1 em{font-style:italic; color:var(--muted);}
+  header p{margin-top:20px; color:var(--muted); max-width:480px; font-size:0.98rem; line-height:1.6;}
+
+  .grid{
+    max-width:1100px; margin:0 auto; padding:64px 40px 100px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+  }
+  .card{
+    border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--panel);
+    display:flex; flex-direction:column;
+  }
+  .preview{
+    position:relative; aspect-ratio:4/3; overflow:hidden; background:#000;
+    border-bottom:1px solid var(--line);
+  }
+  .preview iframe{
+    position:absolute; top:0; left:0;
+    width:250%; height:250%;
+    transform:scale(0.4); transform-origin:top left;
+    border:none; pointer-events:none;
+  }
+  .card-body{padding:22px 22px 24px;}
+  .card-tag{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); margin-bottom:8px;}
+  .card-body h2{font-size:1.25rem; font-weight:600; margin-bottom:8px; letter-spacing:-0.01em;}
+  .card-body p{font-size:0.88rem; color:var(--muted); line-height:1.5; margin-bottom:18px;}
+  .card-link{
+    display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; font-weight:600;
+    color:var(--accent); text-decoration:none; border-bottom:1px solid transparent;
+    transition:border-color .15s ease;
+  }
+  .card-link:hover{border-color:var(--accent);}
+
+  footer{
+    max-width:1100px; margin:0 auto; padding:32px 40px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:0.82rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  }
+
+  @media (max-width:820px){
+    .grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">Portfolio · Desarrollo web</div>
+  <h1>Prototipos <em>funcionales</em>, no solo mockups.</h1>
+  <p>Cada proyecto es HTML/CSS real, sin dependencias, pensado para explorar una dirección visual distinta. Hacé clic para abrir cada uno completo.</p>
+</header>
+
+<section class="grid">
+
+  <article class="card">
+    <div class="preview">
+      <iframe src="https://vickydobler.github.io/proyecto-cafe-landing/" tabindex="-1"></iframe>
+    </div>
+    <div class="card-body">
+      <div class="card-tag">Landing · Editorial</div>
+      <h2>Terreno — Café de origen</h2>
+      <p>Landing de una marca de café de especialidad, con tipografía serif como protagonista y trazabilidad de origen.</p>
+      <a class="card-link" href="https://vickydobler.github.io/proyecto-cafe-landing/">Ver proyecto completo →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="preview">
+      <iframe src="https://vickydobler.github.io/proyecto-saas-dashboard/" tabindex="-1"></iframe>
+    </div>
+    <div class="card-body">
+      <div class="card-tag">Dashboard · SaaS</div>
+      <h2>Cursor — Panel de proyectos</h2>
+      <p>Panel de gestión de proyectos en modo oscuro, con métricas, tabla de estado y actividad del equipo en tiempo real.</p>
+      <a class="card-link" href="https://vickydobler.github.io/proyecto-saas-dashboard/">Ver proyecto completo →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="preview">
+      <iframe src="https://vickydobler.github.io/proyecto-sneaker-ecommerce/" tabindex="-1"></iframe>
+    </div>
+    <div class="card-body">
+      <div class="card-tag">E-commerce · Alto contraste</div>
+      <h2>VOLT — Runner 03</h2>
+      <p>Tienda de una zapatilla running con identidad enérgica, bordes duros y una franja de anuncios animada.</p>
+      <a class="card-link" href="https://vickydobler.github.io/proyecto-sneaker-ecommerce/">Ver proyecto completo →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="preview">
+      <iframe src="https://vickydobler.github.io/proyectoweb-Maybelline/" tabindex="-1"></iframe>
+    </div>
+    <div class="card-body">
+      <div class="card-tag">Sitio web · HTML/CSS/JS</div>
+      <h2>Maybelline</h2>
+      <p>Sitio web de marca de cosmética, con estructura clásica de carpetas css / html / js / img.</p>
+      <a class="card-link" href="https://vickydobler.github.io/proyectoweb-Maybelline/">Ver proyecto completo →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="preview">
+      <iframe src="https://vickydobler.github.io/proyectoAngular-appweb/" tabindex="-1"></iframe>
+    </div>
+    <div class="card-body">
+      <div class="card-tag">App · Angular</div>
+      <h2>Recetario Angular</h2>
+      <p>Recetario web con ruteo, componentes, servicio de favoritos y consumo de API (GET/POST/DELETE) contra DummyJSON Recipes.</p>
+      <a class="card-link" href="https://vickydobler.github.io/proyectoAngular-appweb/">Ver proyecto completo →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="preview">
+      <iframe src="https://vickydobler.github.io/proyecto-kiosco-fatigati/" tabindex="-1"></iframe>
+    </div>
+    <div class="card-body">
+      <div class="card-tag">Landing · Local · Colorida</div>
+      <h2>Fatigati 2 — Kiosco de barrio</h2>
+      <p>Catálogo inspirado en un kiosco real de Olavarría sin web propia: copias, golosinas, librería y regalos, con pedido directo por WhatsApp.</p>
+      <a class="card-link" href="https://vickydobler.github.io/proyecto-kiosco-fatigati/">Ver proyecto completo →</a>
+    </div>
+  </article>
+
+</section>
+
+<footer>
+  <span>Portfolio de prototipos © 2026</span>
+  <span>Hecho con HTML/CSS puro</span>
+</footer>
+
+</body>
+</html>
